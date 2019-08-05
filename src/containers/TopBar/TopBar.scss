@@ -1,0 +1,18 @@
+.TopBar {
+  background-color: #42adf0;
+
+  .container {
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 64px;
+    padding: 18px 6px;
+    display: flex;
+  }
+
+  .title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #fcfcfb;
+  }
+}

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopBar/> should render without crashing 1`] = `
+<div
+  className="TopBar"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="title"
+    />
+  </div>
+</div>
+`;
