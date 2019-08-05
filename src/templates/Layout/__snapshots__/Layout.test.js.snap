@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Layout/> should contain TopBar 1`] = `
+<div
+  className="Layout"
+>
+  <TopBar />
+  <main
+    className="main-section"
+  />
+</div>
+`;
+
+exports[`<Layout/> should contain TopBar 2`] = `
+<div
+  className="Layout"
+>
+  <TopBar
+    title="title"
+  />
+  <main
+    className="main-section"
+  />
+</div>
+`;
+
+exports[`<Layout/> should render without crushing 1`] = `
+<div
+  className="Layout"
+>
+  <TopBar />
+  <main
+    className="main-section"
+  />
+</div>
+`;
