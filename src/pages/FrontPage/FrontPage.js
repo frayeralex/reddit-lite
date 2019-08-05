@@ -1,9 +1,14 @@
 import React from 'react';
+import { Layout } from 'templates';
 import './FrontPage.scss';
 
-class FrontPage extends React.Component {
+export class FrontPage extends React.Component {
   render() {
-    return <div className="FrontPage">FrontPage</div>;
+    return (
+      <Layout>
+        <div className="FrontPage">FrontPage</div>
+      </Layout>
+    );
   }
 }
 
