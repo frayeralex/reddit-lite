@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import store, { history } from './store';
+import store, { history } from './store/store';
 import { App } from 'containers';
 import * as serviceWorker from './serviceWorker';
 import './index.scss';
