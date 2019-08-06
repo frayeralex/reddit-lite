@@ -15,7 +15,7 @@ describe('<FrontPage/>', function() {
     expect(fetchPosts).toHaveBeenCalledTimes(2);
   });
   it('should render Post list if post exist', function() {
-     const component = shallow(<FrontPage posts={[posts[0], posts[1]]} />);
+    const component = shallow(<FrontPage posts={[posts[0], posts[1]]} />);
     expect(component).toMatchSnapshot();
   });
 });

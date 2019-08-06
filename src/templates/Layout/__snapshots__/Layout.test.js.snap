@@ -4,7 +4,7 @@ exports[`<Layout/> should contain TopBar 1`] = `
 <div
   className="Layout"
 >
-  <TopBar />
+  <Connect(TopBar) />
   <main
     className="main-section"
   />
@@ -15,7 +15,7 @@ exports[`<Layout/> should contain TopBar 2`] = `
 <div
   className="Layout"
 >
-  <TopBar
+  <Connect(TopBar)
     title="title"
   />
   <main
@@ -28,7 +28,7 @@ exports[`<Layout/> should render without crushing 1`] = `
 <div
   className="Layout"
 >
-  <TopBar />
+  <Connect(TopBar) />
   <main
     className="main-section"
   />

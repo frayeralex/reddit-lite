@@ -3,7 +3,9 @@ import * as types from './types';
 const initialState = {
   pending: false,
   fetched: false,
-  current: 'news',
+  current: 'reactjs',
+  before: null,
+  after: null,
   postsLimit: 25,
   posts: [],
   error: null,
