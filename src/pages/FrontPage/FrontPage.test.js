@@ -7,6 +7,18 @@ describe('<FrontPage/>', function() {
     const component = shallow(<FrontPage />);
     expect(component).toMatchSnapshot();
   });
+  it('should register interval handler', function() {
+    const component = shallow(<FrontPage />);
+    expect(setInterval).toHaveBeenCalledWith(
+      component.instance().intervalHandler,
+      60000,
+    );
+  });
+  it('should clear interval after unmount', function() {
+    const component = shallow(<FrontPage />);
+    component.unmount();
+    expect(clearInterval).toHaveBeenCalled();
+  });
   it('should call fetchPosts after mounted and updates', function() {
     const fetchPosts = jest.fn();
     const component = shallow(<FrontPage fetchPosts={fetchPosts} />);

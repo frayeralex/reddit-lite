@@ -10,6 +10,11 @@ const localStorageMock = {
   clear: jest.fn(),
 };
 
+const setInterval = jest.fn();
+const clearInterval = jest.fn();
+
+global.setInterval = setInterval;
+global.clearInterval = clearInterval;
 global.localStorage = localStorageMock;
 global.mount = mount;
 global.shallow = shallow;

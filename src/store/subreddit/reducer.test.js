@@ -1,6 +1,6 @@
 import reducer from './reducer';
 import * as types from './types';
-import posts from "../../__fixtures__/posts";
+import posts from '../../__fixtures__/posts';
 
 const initState = {
   pending: false,
@@ -24,34 +24,36 @@ const fullState = {
   error: null,
 };
 
-describe('src/store/subreddit/reducer.js', function () {
-  it('should return init state', function () {
+describe('src/store/subreddit/reducer.js', function() {
+  it('should return init state', function() {
     expect(reducer(undefined, {})).toEqual(initState);
   });
-  it('should return new state object', function () {
-    expect(reducer(initState, { type: types.SET_PENDING }) !== initState).toBeTruthy();
+  it('should return new state object', function() {
+    expect(
+      reducer(initState, { type: types.SET_PENDING }) !== initState,
+    ).toBeTruthy();
   });
-  it('should handle SET_PENDING correct', function () {
+  it('should handle SET_PENDING correct', function() {
     const state = reducer(initState, {
       type: types.SET_PENDING,
       payload: true,
     });
     expect(state).toEqual({
       ...initState,
-      pending: true
+      pending: true,
     });
   });
-  it('should handle SET_POSTS_LIMIT correct', function () {
+  it('should handle SET_POSTS_LIMIT correct', function() {
     const state = reducer(initState, {
       type: types.SET_POSTS_LIMIT,
       payload: 100,
     });
     expect(state).toEqual({
       ...initState,
-      postsLimit: 100
+      postsLimit: 100,
     });
   });
-  it('should handle SET_CURRENT correct', function () {
+  it('should handle SET_CURRENT correct', function() {
     const state = reducer(fullState, {
       type: types.SET_CURRENT,
       payload: 'current',
@@ -62,7 +64,7 @@ describe('src/store/subreddit/reducer.js', function () {
       posts: [],
     });
   });
-  it('should handle SET_ERROR correct', function () {
+  it('should handle SET_ERROR correct', function() {
     const state = reducer(fullState, {
       type: types.SET_ERROR,
       payload: 'error',
@@ -72,7 +74,7 @@ describe('src/store/subreddit/reducer.js', function () {
       error: 'error',
     });
   });
-  it('should handle SET_POSTS correct', function () {
+  it('should handle SET_POSTS correct', function() {
     const state = reducer(fullState, {
       type: types.SET_POSTS,
       payload: {

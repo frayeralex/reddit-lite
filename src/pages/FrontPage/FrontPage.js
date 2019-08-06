@@ -11,8 +11,10 @@ export class FrontPage extends React.Component {
   static propTypes = {
     fetchPosts: PropTypes.func,
     currentSubreddit: PropTypes.string,
+    beforePostId: PropTypes.string,
     posts: PropTypes.arrayOf(PropTypes.object),
   };
+
   static defaultProps = {
     fetchPosts: () => {},
     posts: [],
@@ -20,7 +22,16 @@ export class FrontPage extends React.Component {
 
   componentDidMount() {
     this.props.fetchPosts();
+    this.postIntervalId = window.setInterval(this.intervalHandler, 60 * 1000);
   }
+
+  componentWillUnmount() {
+    window.clearInterval(this.postIntervalId);
+  }
+
+  intervalHandler = () => {
+    this.props.fetchPosts();
+  };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (prevProps.currentSubreddit !== this.props.currentSubreddit) {
@@ -51,6 +62,7 @@ export class FrontPage extends React.Component {
 }
 
 const mapStateToProps = state => ({
+  beforePostId: subreddit.selectors.beforePostId(state),
   currentSubreddit: subreddit.selectors.getCurrent(state),
   posts: subreddit.selectors.getPosts(state),
 });
