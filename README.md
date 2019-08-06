@@ -1,6 +1,7 @@
 Reddit-Lite
 ==============
-
+[![Build Status](https://travis-ci.org/frayeralex/reddit-lite.svg?branch=master)](https://travis-ci.org/frayeralex/reddit-lite)
+[![Coverage Status](https://coveralls.io/repos/github/frayeralex/reddit-lite/badge.svg?branch=master)](https://coveralls.io/github/frayeralex/reddit-lite?branch=master)
 ## Project structure
 
     .
