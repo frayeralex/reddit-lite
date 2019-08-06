@@ -1,9 +1,15 @@
 language: node_js
 node_js:
   - 10.8
+addons:
+  apt:
+    packages:
+      - libgconf-2-4
 cache:
   directories:
     - node_modules
+    - ~/.npm
+    - ~/.cache
 script:
   - $(npm bin)/print-env TRAVIS
   - npm test:unit
