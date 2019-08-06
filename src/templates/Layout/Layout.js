@@ -13,7 +13,7 @@ const Layout = ({ children, header }) => {
 };
 
 Layout.propTypes = {
-  header: PropTypes.instanceOf(TopBar),
+  header: PropTypes.element,
 };
 
 export default Layout;

@@ -1,5 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<TopBar/> should handle input state changes correct 1`] = `
+<div
+  className="TopBar"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="title"
+    />
+    <form
+      className="search-container"
+      onSubmit={[Function]}
+    >
+      <input
+        name="current"
+        onChange={[Function]}
+        type="text"
+        value="current"
+      />
+    </form>
+  </div>
+</div>
+`;
+
+exports[`<TopBar/> should handle input state changes correct 2`] = `
+<div
+  className="TopBar"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="title"
+    />
+    <form
+      className="search-container"
+      onSubmit={[Function]}
+    >
+      <input
+        name="current"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </form>
+  </div>
+</div>
+`;
+
 exports[`<TopBar/> should render without crashing 1`] = `
 <div
   className="TopBar"
@@ -10,6 +60,16 @@ exports[`<TopBar/> should render without crashing 1`] = `
     <div
       className="title"
     />
+    <form
+      className="search-container"
+      onSubmit={[Function]}
+    >
+      <input
+        name="current"
+        onChange={[Function]}
+        type="text"
+      />
+    </form>
   </div>
 </div>
 `;
