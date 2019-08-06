@@ -1,0 +1,412 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FrontPage/> should render Post list if post exist 1`] = `
+<Layout
+  header={<Memo(ConnectFunction) />}
+>
+  <div
+    className="FrontPage"
+  >
+    <ul
+      className="post-list"
+    >
+      <Memo(Post)
+        data={
+          Object {
+            "all_awardings": Array [
+              Object {
+                "award_type": "global",
+                "coin_price": 500,
+                "coin_reward": 100,
+                "count": 1,
+                "days_of_drip_extension": 0,
+                "days_of_premium": 7,
+                "description": "Gives the author a week of Reddit Premium, %%{coin_symbol}100 Coins to do with as they please, and shows a Gold Award on the post.",
+                "icon_height": 512,
+                "icon_url": "https://www.redditstatic.com/gold/awards/icon/gold_512.png",
+                "icon_width": 512,
+                "id": "gid_2",
+                "is_enabled": true,
+                "name": "Gold",
+                "resized_icons": Array [
+                  Object {
+                    "height": 16,
+                    "url": "https://www.redditstatic.com/gold/awards/icon/gold_16.png",
+                    "width": 16,
+                  },
+                  Object {
+                    "height": 32,
+                    "url": "https://www.redditstatic.com/gold/awards/icon/gold_32.png",
+                    "width": 32,
+                  },
+                  Object {
+                    "height": 48,
+                    "url": "https://www.redditstatic.com/gold/awards/icon/gold_48.png",
+                    "width": 48,
+                  },
+                  Object {
+                    "height": 64,
+                    "url": "https://www.redditstatic.com/gold/awards/icon/gold_64.png",
+                    "width": 64,
+                  },
+                  Object {
+                    "height": 128,
+                    "url": "https://www.redditstatic.com/gold/awards/icon/gold_128.png",
+                    "width": 128,
+                  },
+                ],
+                "subreddit_coin_reward": 0,
+                "subreddit_id": null,
+              },
+            ],
+            "allow_live_comments": false,
+            "approved_at_utc": null,
+            "approved_by": null,
+            "archived": false,
+            "author": "swyx",
+            "author_flair_background_color": null,
+            "author_flair_css_class": null,
+            "author_flair_richtext": Array [],
+            "author_flair_template_id": null,
+            "author_flair_text": null,
+            "author_flair_text_color": null,
+            "author_flair_type": "text",
+            "author_fullname": "t2_kcqtz",
+            "author_patreon_flair": false,
+            "banned_at_utc": null,
+            "banned_by": null,
+            "can_gild": false,
+            "can_mod_post": false,
+            "category": null,
+            "clicked": false,
+            "content_categories": null,
+            "contest_mode": true,
+            "created": 1564697505,
+            "created_utc": 1564668705,
+            "discussion_type": null,
+            "distinguished": "moderator",
+            "domain": "self.reactjs",
+            "downs": 0,
+            "edited": 1564769366,
+            "gilded": 1,
+            "gildings": Object {
+              "gid_2": 1,
+            },
+            "hidden": false,
+            "hide_score": false,
+            "id": "ckow24",
+            "is_crosspostable": false,
+            "is_meta": false,
+            "is_original_content": false,
+            "is_reddit_media_domain": false,
+            "is_robot_indexable": true,
+            "is_self": true,
+            "is_video": false,
+            "likes": null,
+            "link_flair_background_color": "#94e044",
+            "link_flair_css_class": "link-flair-careers",
+            "link_flair_richtext": Array [],
+            "link_flair_template_id": "8230d474-857b-11e8-8125-0ea00c291202",
+            "link_flair_text": "Careers",
+            "link_flair_text_color": "dark",
+            "link_flair_type": "text",
+            "locked": false,
+            "media": null,
+            "media_embed": Object {},
+            "media_only": false,
+            "mod_note": null,
+            "mod_reason_by": null,
+            "mod_reason_title": null,
+            "mod_reports": Array [],
+            "name": "t3_ckow24",
+            "no_follow": false,
+            "num_comments": 46,
+            "num_crossposts": 1,
+            "num_reports": null,
+            "over_18": false,
+            "parent_whitelist_status": "all_ads",
+            "permalink": "/r/reactjs/comments/ckow24/whos_hiring_august_2019/",
+            "pinned": false,
+            "pwls": 6,
+            "quarantine": false,
+            "removal_reason": null,
+            "report_reasons": null,
+            "saved": false,
+            "score": 106,
+            "secure_media": null,
+            "secure_media_embed": Object {},
+            "selftext": "*We alternate between* **Who's Hiring** *(on the 1st of the month,* [*most recent one here*](https://www.reddit.com/r/reactjs/comments/c843d5/whos_hiring_july_2019/)*) and* **Who's Available** *(on the 15th,* [*most recent one here*](https://www.reddit.com/r/reactjs/comments/cdkvtq/whos_available_july_2019/)*)*
+
+Welcome to **the biggest React job board in the world**! This is like Hacker News' **Who's Hiring** but just for React. Top Level comments must be **Job Opportunities**.
+
+⚠️ NEW: WE ARE REQUESTING EVERYBODY FOLLOW [THE HN Who's Hiring FORMAT](https://news.ycombinator.com/item?id=17205865)
+
+**Company inc. | Job Title | City/State Location | Full-time/Part-Time | On-site/Remote | (Optional) Salary range | Website jobs page, other hard requirements etc.**
+
+examples: 
+
+- **Thorn | San Francisco or Remote (US based) | Full-time Contract | $100k - $150k | Software Engineer | https://www.wearethorn.org/**
+- **PolicyStat | Full-Stack Python+Django Software Engineer | Indianapolis, Vancouver, or REMOTE | Full Time | +$80k**
+
+Please include as much information as possible. **If you are remote-friendly, or open to sponsoring work visas to your country, say so! These are the top 2 questions!**
+
+If you are looking for jobs, send a PM to the poster or post in our [Who's Available thread](https://www.reddit.com/r/reactjs/comments/cdkvtq/whos_available_july_2019/)!
+
+Recruiters ok!
+
+*Edit: Obligatory OMG THANKS FOR THE GOLD",
+            "selftext_html": "&lt;!-- SC_OFF --&gt;&lt;div class=\\"md\\"&gt;&lt;p&gt;&lt;em&gt;We alternate between&lt;/em&gt; &lt;strong&gt;Who&amp;#39;s Hiring&lt;/strong&gt; &lt;em&gt;(on the 1st of the month,&lt;/em&gt; &lt;a href=\\"https://www.reddit.com/r/reactjs/comments/c843d5/whos_hiring_july_2019/\\"&gt;&lt;em&gt;most recent one here&lt;/em&gt;&lt;/a&gt;&lt;em&gt;) and&lt;/em&gt; &lt;strong&gt;Who&amp;#39;s Available&lt;/strong&gt; &lt;em&gt;(on the 15th,&lt;/em&gt; &lt;a href=\\"https://www.reddit.com/r/reactjs/comments/cdkvtq/whos_available_july_2019/\\"&gt;&lt;em&gt;most recent one here&lt;/em&gt;&lt;/a&gt;&lt;em&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Welcome to &lt;strong&gt;the biggest React job board in the world&lt;/strong&gt;! This is like Hacker News&amp;#39; &lt;strong&gt;Who&amp;#39;s Hiring&lt;/strong&gt; but just for React. Top Level comments must be &lt;strong&gt;Job Opportunities&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;⚠️ NEW: WE ARE REQUESTING EVERYBODY FOLLOW &lt;a href=\\"https://news.ycombinator.com/item?id=17205865\\"&gt;THE HN Who&amp;#39;s Hiring FORMAT&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Company inc. | Job Title | City/State Location | Full-time/Part-Time | On-site/Remote | (Optional) Salary range | Website jobs page, other hard requirements etc.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;examples: &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Thorn | San Francisco or Remote (US based) | Full-time Contract | $100k - $150k | Software Engineer | &lt;a href=\\"https://www.wearethorn.org/\\"&gt;https://www.wearethorn.org/&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PolicyStat | Full-Stack Python+Django Software Engineer | Indianapolis, Vancouver, or REMOTE | Full Time | +$80k&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please include as much information as possible. &lt;strong&gt;If you are remote-friendly, or open to sponsoring work visas to your country, say so! These are the top 2 questions!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are looking for jobs, send a PM to the poster or post in our &lt;a href=\\"https://www.reddit.com/r/reactjs/comments/cdkvtq/whos_available_july_2019/\\"&gt;Who&amp;#39;s Available thread&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Recruiters ok!&lt;/p&gt;
+
+&lt;p&gt;*Edit: Obligatory OMG THANKS FOR THE GOLD&lt;/p&gt;
+&lt;/div&gt;&lt;!-- SC_ON --&gt;",
+            "send_replies": true,
+            "spoiler": false,
+            "stickied": true,
+            "subreddit": "reactjs",
+            "subreddit_id": "t5_2zldd",
+            "subreddit_name_prefixed": "r/reactjs",
+            "subreddit_subscribers": 129260,
+            "subreddit_type": "public",
+            "suggested_sort": "new",
+            "thumbnail": "self",
+            "thumbnail_height": null,
+            "thumbnail_width": null,
+            "title": "Who’s Hiring? [August 2019]",
+            "total_awards_received": 1,
+            "ups": 106,
+            "url": "https://www.reddit.com/r/reactjs/comments/ckow24/whos_hiring_august_2019/",
+            "user_reports": Array [],
+            "view_count": null,
+            "visited": false,
+            "whitelist_status": "all_ads",
+            "wls": 6,
+          }
+        }
+        key="t3_ckow24"
+      />
+      <Memo(Post)
+        data={
+          Object {
+            "all_awardings": Array [],
+            "allow_live_comments": false,
+            "approved_at_utc": null,
+            "approved_by": null,
+            "archived": false,
+            "author": "timmonsjg",
+            "author_flair_background_color": null,
+            "author_flair_css_class": null,
+            "author_flair_richtext": Array [],
+            "author_flair_template_id": null,
+            "author_flair_text": null,
+            "author_flair_text_color": null,
+            "author_flair_type": "text",
+            "author_fullname": "t2_2aun3ozb",
+            "author_patreon_flair": false,
+            "banned_at_utc": null,
+            "banned_by": null,
+            "can_gild": false,
+            "can_mod_post": false,
+            "category": null,
+            "clicked": false,
+            "content_categories": null,
+            "contest_mode": false,
+            "created": 1564699400,
+            "created_utc": 1564670600,
+            "discussion_type": null,
+            "distinguished": "moderator",
+            "domain": "self.reactjs",
+            "downs": 0,
+            "edited": false,
+            "gilded": 0,
+            "gildings": Object {},
+            "hidden": false,
+            "hide_score": false,
+            "id": "ckpa1i",
+            "is_crosspostable": false,
+            "is_meta": false,
+            "is_original_content": false,
+            "is_reddit_media_domain": false,
+            "is_robot_indexable": true,
+            "is_self": true,
+            "is_video": false,
+            "likes": null,
+            "link_flair_background_color": "",
+            "link_flair_css_class": null,
+            "link_flair_richtext": Array [],
+            "link_flair_text": null,
+            "link_flair_text_color": "dark",
+            "link_flair_type": "text",
+            "locked": false,
+            "media": null,
+            "media_embed": Object {},
+            "media_only": false,
+            "mod_note": null,
+            "mod_reason_by": null,
+            "mod_reason_title": null,
+            "mod_reports": Array [],
+            "name": "t3_ckpa1i",
+            "no_follow": false,
+            "num_comments": 84,
+            "num_crossposts": 0,
+            "num_reports": null,
+            "over_18": false,
+            "parent_whitelist_status": "all_ads",
+            "permalink": "/r/reactjs/comments/ckpa1i/beginners_thread_easy_questions_august_2019/",
+            "pinned": false,
+            "pwls": 6,
+            "quarantine": false,
+            "removal_reason": null,
+            "report_reasons": null,
+            "saved": false,
+            "score": 8,
+            "secure_media": null,
+            "secure_media_embed": Object {},
+            "selftext": "Previous two threads - [July 2019](https://www.reddit.com/r/reactjs/comments/c88pzm/beginners_thread_easy_questions_july_2019/) and [June 2019](https://www.reddit.com/r/reactjs/comments/bvxng8/beginners_thread_easy_questions_june_2019/).
+
+Got questions about React or anything else in its ecosystem? Stuck making progress on your app? Ask away! We’re a friendly bunch. 
+
+No question is too simple. 🤔
+
+---------------------------------------------
+
+🆘 **Want Help with your Code?** 🆘
+
+* **Improve your chances** by putting a minimal example to either [JSFiddle](https://jsfiddle.net/Luktwrdm/) or [Code Sandbox](https://codesandbox.io/s/new). Describe what you want it to do, and things you've tried. Don't just post big blocks of code!
+
+* **Pay it forward!** Answer questions even if there is already an answer - multiple perspectives can be very helpful to beginners. Also there's no quicker way to learn than [being wrong on the Internet](https://xkcd.com/386/). 
+
+**Have a question regarding code / repository organization?**
+
+It's most likely answered within this [tweet](https://twitter.com/dan_abramov/status/1027245759232651270?lang=en).
+
+---------------------------------------------------
+
+**New to React?**
+
+**Check out the sub's sidebar!**
+
+🆓 Here are great, **free** resources! 🆓
+
+* [Create React App](https://facebook.github.io/create-react-app/)
+* [Read the **official** Getting Started page](https://reactjs.org/docs/getting-started.html) on the docs.
+* [/u/acemarke](https://www.reddit.com/u/acemarke)'s [suggested resources for learning React](http://blog.isquaredsoftware.com/2017/12/blogged-answers-learn-react/)
+* [Kent Dodd's Egghead.io course](http://kcd.im/beginner-react)
+* [Tyler McGinnis' 2018 Guide](https://medium.freecodecamp.org/a-comprehensive-guide-to-react-js-in-2018-ba8bb6975597)
+* [Codecademy's React courses](https://www.codecademy.com/catalog/language/javascript)
+* [Scrimba's React Course](https://scrimba.com/g/glearnreact)
+* [Robin Wieruch's Road to React](https://roadtoreact.com)
+
+-----
+
+Any ideas/suggestions to improve this thread - feel free to comment here!
+
+----
+_Finally, an ongoing thank you to all who post questions and those who answer them. We're a growing community and helping each other only strengthens it!_",
+            "selftext_html": "&lt;!-- SC_OFF --&gt;&lt;div class=\\"md\\"&gt;&lt;p&gt;Previous two threads - &lt;a href=\\"https://www.reddit.com/r/reactjs/comments/c88pzm/beginners_thread_easy_questions_july_2019/\\"&gt;July 2019&lt;/a&gt; and &lt;a href=\\"https://www.reddit.com/r/reactjs/comments/bvxng8/beginners_thread_easy_questions_june_2019/\\"&gt;June 2019&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Got questions about React or anything else in its ecosystem? Stuck making progress on your app? Ask away! We’re a friendly bunch. &lt;/p&gt;
+
+&lt;p&gt;No question is too simple. 🤔&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;🆘 &lt;strong&gt;Want Help with your Code?&lt;/strong&gt; 🆘&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Improve your chances&lt;/strong&gt; by putting a minimal example to either &lt;a href=\\"https://jsfiddle.net/Luktwrdm/\\"&gt;JSFiddle&lt;/a&gt; or &lt;a href=\\"https://codesandbox.io/s/new\\"&gt;Code Sandbox&lt;/a&gt;. Describe what you want it to do, and things you&amp;#39;ve tried. Don&amp;#39;t just post big blocks of code!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Pay it forward!&lt;/strong&gt; Answer questions even if there is already an answer - multiple perspectives can be very helpful to beginners. Also there&amp;#39;s no quicker way to learn than &lt;a href=\\"https://xkcd.com/386/\\"&gt;being wrong on the Internet&lt;/a&gt;. &lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Have a question regarding code / repository organization?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s most likely answered within this &lt;a href=\\"https://twitter.com/dan_abramov/status/1027245759232651270?lang=en\\"&gt;tweet&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;&lt;strong&gt;New to React?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Check out the sub&amp;#39;s sidebar!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;🆓 Here are great, &lt;strong&gt;free&lt;/strong&gt; resources! 🆓&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=\\"https://facebook.github.io/create-react-app/\\"&gt;Create React App&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=\\"https://reactjs.org/docs/getting-started.html\\"&gt;Read the &lt;strong&gt;official&lt;/strong&gt; Getting Started page&lt;/a&gt; on the docs.&lt;/li&gt;
+&lt;li&gt;&lt;a href=\\"https://www.reddit.com/u/acemarke\\"&gt;/u/acemarke&lt;/a&gt;&amp;#39;s &lt;a href=\\"http://blog.isquaredsoftware.com/2017/12/blogged-answers-learn-react/\\"&gt;suggested resources for learning React&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=\\"http://kcd.im/beginner-react\\"&gt;Kent Dodd&amp;#39;s Egghead.io course&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=\\"https://medium.freecodecamp.org/a-comprehensive-guide-to-react-js-in-2018-ba8bb6975597\\"&gt;Tyler McGinnis&amp;#39; 2018 Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=\\"https://www.codecademy.com/catalog/language/javascript\\"&gt;Codecademy&amp;#39;s React courses&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=\\"https://scrimba.com/g/glearnreact\\"&gt;Scrimba&amp;#39;s React Course&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=\\"https://roadtoreact.com\\"&gt;Robin Wieruch&amp;#39;s Road to React&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;Any ideas/suggestions to improve this thread - feel free to comment here!&lt;/p&gt;
+
+&lt;hr/&gt;
+
+&lt;p&gt;&lt;em&gt;Finally, an ongoing thank you to all who post questions and those who answer them. We&amp;#39;re a growing community and helping each other only strengthens it!&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;!-- SC_ON --&gt;",
+            "send_replies": true,
+            "spoiler": false,
+            "stickied": true,
+            "subreddit": "reactjs",
+            "subreddit_id": "t5_2zldd",
+            "subreddit_name_prefixed": "r/reactjs",
+            "subreddit_subscribers": 129260,
+            "subreddit_type": "public",
+            "suggested_sort": "new",
+            "thumbnail": "self",
+            "thumbnail_height": null,
+            "thumbnail_width": null,
+            "title": "Beginner's Thread / Easy Questions (August 2019)",
+            "total_awards_received": 0,
+            "ups": 8,
+            "url": "https://www.reddit.com/r/reactjs/comments/ckpa1i/beginners_thread_easy_questions_august_2019/",
+            "user_reports": Array [],
+            "view_count": null,
+            "visited": false,
+            "whitelist_status": "all_ads",
+            "wls": 6,
+          }
+        }
+        key="t3_ckpa1i"
+      />
+    </ul>
+  </div>
+</Layout>
+`;
+
+exports[`<FrontPage/> should render without crushing 1`] = `
+<Layout
+  header={<Memo(ConnectFunction) />}
+>
+  <div
+    className="FrontPage"
+  >
+    <div>
+      No data
+    </div>
+  </div>
+</Layout>
+`;

@@ -1,3 +1,16 @@
 .FrontPage {
   text-align: center;
+
+  .post-list {
+    padding-top: 20px;
+
+    .Post {
+      margin-bottom: 20px;
+      border-radius: 3px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
