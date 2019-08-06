@@ -11,6 +11,5 @@ cache:
     - ~/.npm
     - ~/.cache
 script:
-  - $(npm bin)/print-env TRAVIS
   - npm test:unit
   - npm run coveralls
