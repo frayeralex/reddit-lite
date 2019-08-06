@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Post/> should render thumbnail if it exist 1`] = `
+<li
+  className="Post"
+>
+  <header
+    className="header-container"
+  >
+    <div
+      className="author"
+    >
+      Posted by
+       
+      <a
+        className="external-link"
+        href="https://www.reddit.com/user/renaissancetroll"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        u/
+        renaissancetroll
+         
+        <i
+          className="fa fa-external-link"
+        />
+      </a>
+       
+    </div>
+    <span
+      className="created-time"
+    >
+      16 hours ago
+    </span>
+  </header>
+  <div
+    className="middle-container"
+  >
+    <div
+      className="thumbnail-container"
+    >
+      <img
+        alt=""
+        src="https://a.thumbs.redditmedia.com/stFTqRDLe3EBfpL5FF34QPvmFrMjKtmuKTxFlFrh374.jpg"
+      />
+    </div>
+    <div
+      className="title"
+    >
+      Twitch API Dashboard - A Fun, Extendable Beginner ReactJS Tutorial
+       
+      <a
+        className="external-link"
+        href="https://youtu.be/VTY6ZzDTV3A"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i
+          className="fa fa-external-link"
+        />
+      </a>
+    </div>
+  </div>
+  <footer
+    className="footer-container"
+  >
+    <span
+      className="comments-link"
+    >
+      <a
+        className="external-link"
+        href="https://www.reddit.com/r/reactjs/comments/cmcq55/twitch_api_dashboard_a_fun_extendable_beginner/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        15
+         
+        <i
+          className="fa fa-comments"
+        />
+      </a>
+    </span>
+  </footer>
+</li>
+`;
+
+exports[`<Post/> should render without crushing  1`] = `
+<li
+  className="Post"
+>
+  <header
+    className="header-container"
+  >
+    <div
+      className="author"
+    >
+      Posted by
+       
+      <a
+        className="external-link"
+        href="https://www.reddit.com/user/swyx"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        u/
+        swyx
+         
+        <i
+          className="fa fa-external-link"
+        />
+      </a>
+       
+    </div>
+    <span
+      className="created-time"
+    >
+      16 hours ago
+    </span>
+  </header>
+  <div
+    className="middle-container"
+  >
+    <div
+      className="title"
+    >
+      Who’s Hiring? [August 2019]
+       
+      <a
+        className="external-link"
+        href="https://www.reddit.com/r/reactjs/comments/ckow24/whos_hiring_august_2019/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i
+          className="fa fa-external-link"
+        />
+      </a>
+    </div>
+  </div>
+  <footer
+    className="footer-container"
+  >
+    <span
+      className="comments-link"
+    >
+      <a
+        className="external-link"
+        href="https://www.reddit.com/r/reactjs/comments/ckow24/whos_hiring_august_2019/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        46
+         
+        <i
+          className="fa fa-comments"
+        />
+      </a>
+    </span>
+  </footer>
+</li>
+`;
