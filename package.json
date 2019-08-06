@@ -80,10 +80,6 @@
     "arrowParens": "avoid",
     "trailingComma": "all"
   },
-  "engines": {
-    "node": ">=10.11",
-    "yarn": "^1.9.4"
-  },
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
