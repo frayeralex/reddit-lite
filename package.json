@@ -20,7 +20,7 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "eslint": "eslint --fix \"{src,__{tests,mocks}__}/**/*.js\"",
     "prettier": "prettier --write \"{src,__{tests,mocks}__}/**/*.{js,scss}\"",
-    "coveralls": "npm run test -- --coverage && cat ./tests/coverage/lcov.info | coveralls",
+    "coveralls": "npm run test -- --coverage && cat ./coverage/lcov.info | coveralls",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "cross-env CI=true react-scripts test --env=jsdom",
