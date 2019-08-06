@@ -1,1 +1,1 @@
-export { default as subbredditService } from './Subreddit/Subbreddit'
+export { default as subredditService } from './Subreddit/Subreddit';
