@@ -18,7 +18,7 @@
     "generact": "generact",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "eslint": "eslint --fix \"{src,__{tests,mocks}__}/**/*.js\"",
-    "prettier": "prettier --write \"{src,__{tests,mocks}__}/**/*.js\" \"{src,__{tests,mocks}__}/**/*.scss\"",
+    "prettier": "prettier --write \"{src,__{tests,mocks}__}/**/*.{js,scss}\"",
     "coveralls": "npm run test -- --coverage && cat ./tests/coverage/lcov.info | coveralls",
     "start": "react-scripts start",
     "build": "react-scripts build",
