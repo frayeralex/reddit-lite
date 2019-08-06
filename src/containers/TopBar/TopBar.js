@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { subreddit } from '../../store';
 import './TopBar.scss';
 
 export class TopBar extends React.PureComponent {
@@ -18,4 +20,8 @@ export class TopBar extends React.PureComponent {
   }
 }
 
-export default TopBar;
+const mapStateToProps = state => ({
+  title: subreddit.selectors.getCurrent(state),
+});
+
+export default connect(mapStateToProps)(TopBar);
