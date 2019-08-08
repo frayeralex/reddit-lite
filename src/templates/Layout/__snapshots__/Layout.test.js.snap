@@ -24,7 +24,7 @@ exports[`<Layout/> should contain TopBar 2`] = `
 </div>
 `;
 
-exports[`<Layout/> should render without crushing 1`] = `
+exports[`<Layout/> should render without crashing 1`] = `
 <div
   className="Layout"
 >

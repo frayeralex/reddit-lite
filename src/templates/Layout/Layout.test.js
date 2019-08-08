@@ -3,7 +3,7 @@ import Layout from './Layout';
 import { TopBar } from 'containers';
 
 describe('<Layout/>', function() {
-  it('should render without crushing', function() {
+  it('should render without crashing', function() {
     const component = shallow(<Layout />);
     expect(component).toMatchSnapshot();
   });

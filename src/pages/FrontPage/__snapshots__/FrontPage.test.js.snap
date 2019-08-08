@@ -395,7 +395,7 @@ _Finally, an ongoing thank you to all who post questions and those who answer th
 </Layout>
 `;
 
-exports[`<FrontPage/> should render without crushing 1`] = `
+exports[`<FrontPage/> should render without crashing 1`] = `
 <Layout>
   <div
     className="FrontPage"

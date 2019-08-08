@@ -84,7 +84,7 @@ exports[`<Post/> should render thumbnail if it exist 1`] = `
 </li>
 `;
 
-exports[`<Post/> should render without crushing  1`] = `
+exports[`<Post/> should render without crashing  1`] = `
 <li
   className="Post"
 >

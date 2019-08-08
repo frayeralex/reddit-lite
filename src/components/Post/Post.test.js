@@ -5,7 +5,7 @@ import posts from '__fixtures__/posts';
 jest.mock('moment', () => () => ({ fromNow: () => '16 hours ago' }));
 
 describe('<Post/>', () => {
-  it('should render without crushing ', () => {
+  it('should render without crashing ', () => {
     const [{ data }] = posts;
     const component = shallow(<Post data={data} />);
     expect(component).toMatchSnapshot();

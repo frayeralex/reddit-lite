@@ -3,7 +3,7 @@ import { FrontPage } from './FrontPage';
 import posts from '../../__fixtures__/posts';
 
 describe('<FrontPage/>', function() {
-  it('should render without crushing', function() {
+  it('should render without crashing', function() {
     const component = shallow(<FrontPage />);
     expect(component).toMatchSnapshot();
   });
