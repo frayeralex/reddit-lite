@@ -24,7 +24,9 @@ exports[`<TopBar/> should handle input state changes correct 1`] = `
           value="current"
         />
       </form>
-      <div>
+      <div
+        className="navigation-container"
+      >
         <button
           onClick={[Function]}
         >
@@ -60,81 +62,9 @@ exports[`<TopBar/> should handle input state changes correct 2`] = `
           value=""
         />
       </form>
-      <div>
-        <button
-          onClick={[Function]}
-        >
-          Next
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<TopBar/> should handle post limit selector change correctly 1`] = `
-<div
-  className="TopBar"
->
-  <div
-    className="container"
-  >
-    <div
-      className="title"
-    />
-    <div
-      className="controls-container"
-    >
-      <form
-        className="search-container"
-        onSubmit={[Function]}
-      >
-        <input
-          name="current"
-          onChange={[Function]}
-          type="text"
-        />
-      </form>
       <div
-        className="select-container"
+        className="navigation-container"
       >
-        <select
-          name="postsLimit"
-          onChange={[Function]}
-          value={25}
-        >
-          <option
-            key="25"
-            value={25}
-          >
-            25
-          </option>
-          <option
-            key="50"
-            value={50}
-          >
-            50
-          </option>
-          <option
-            key="75"
-            value={75}
-          >
-            75
-          </option>
-          <option
-            key="100"
-            value={100}
-          >
-            100
-          </option>
-        </select>
-      </div>
-      <div>
-        <button
-          onClick={[Function]}
-        >
-          Prev
-        </button>
         <button
           onClick={[Function]}
         >
@@ -169,81 +99,9 @@ exports[`<TopBar/> should render without crashing 1`] = `
           type="text"
         />
       </form>
-      <div>
-        <button
-          onClick={[Function]}
-        >
-          Next
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<TopBar/> should show postsLimit prop in select value correctly 1`] = `
-<div
-  className="TopBar"
->
-  <div
-    className="container"
-  >
-    <div
-      className="title"
-    />
-    <div
-      className="controls-container"
-    >
-      <form
-        className="search-container"
-        onSubmit={[Function]}
-      >
-        <input
-          name="current"
-          onChange={[Function]}
-          type="text"
-        />
-      </form>
       <div
-        className="select-container"
+        className="navigation-container"
       >
-        <select
-          name="postsLimit"
-          onChange={[Function]}
-          value={50}
-        >
-          <option
-            key="25"
-            value={25}
-          >
-            25
-          </option>
-          <option
-            key="50"
-            value={50}
-          >
-            50
-          </option>
-          <option
-            key="75"
-            value={75}
-          >
-            75
-          </option>
-          <option
-            key="100"
-            value={100}
-          >
-            100
-          </option>
-        </select>
-      </div>
-      <div>
-        <button
-          onClick={[Function]}
-        >
-          Prev
-        </button>
         <button
           onClick={[Function]}
         >
