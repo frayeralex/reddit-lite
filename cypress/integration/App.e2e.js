@@ -43,37 +43,37 @@ describe('App E2E', () => {
     cy.visit('/');
     cy.wait('@getPosts');
 
-    cy.get('[data-cy="prev-btn"]').click();
+    cy.dataCy('prev-btn').click();
 
     cy.wait('@getPosts');
 
-    cy.get('[data-cy="no-data"]').should('have.text', 'No data');
+    cy.dataCy('no-data').should('have.text', 'No data');
 
-    cy.get('[data-cy="next-btn"]').click();
-
-    cy.wait('@getPosts');
-
-    cy.get('.post-list').should('exist');
-    cy.get('.Post').should('exist');
-
-    cy.get('[data-cy="next-btn"]').click();
+    cy.dataCy('next-btn').click();
 
     cy.wait('@getPosts');
 
     cy.get('.post-list').should('exist');
     cy.get('.Post').should('exist');
 
-    cy.get('[data-cy="prev-btn"]').click();
+    cy.dataCy('next-btn').click();
 
     cy.wait('@getPosts');
 
     cy.get('.post-list').should('exist');
     cy.get('.Post').should('exist');
 
-    cy.get('[data-cy="prev-btn"]').click();
+    cy.dataCy('prev-btn').click();
 
     cy.wait('@getPosts');
 
-    cy.get('[data-cy="no-data"]').should('have.text', 'No data');
+    cy.get('.post-list').should('exist');
+    cy.get('.Post').should('exist');
+
+    cy.dataCy('prev-btn').click();
+
+    cy.wait('@getPosts');
+
+    cy.dataCy('no-data').should('have.text', 'No data');
   });
 });
