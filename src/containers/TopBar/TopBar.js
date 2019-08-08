@@ -63,9 +63,13 @@ export class TopBar extends React.PureComponent {
             </form>
             <div className="navigation-container">
               {(this.props.beforePostId || this.props.afterPostId) && (
-                <button onClick={this.handlePrevBtnClick}>Prev</button>
+                <button data-cy="prev-btn" onClick={this.handlePrevBtnClick}>
+                  Prev
+                </button>
               )}
-              <button onClick={this.handleNextBtnClick}>Next</button>
+              <button data-cy="next-btn" onClick={this.handleNextBtnClick}>
+                Next
+              </button>
             </div>
           </div>
         </div>

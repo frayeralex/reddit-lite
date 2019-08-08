@@ -1,33 +1,34 @@
 describe('App E2E', () => {
-  beforeEach(function () {
-    cy.server()
-    cy.route('https://www.reddit.com/r/*').as('getPosts')
+  beforeEach(function() {
+    cy.server();
+    cy.route('https://www.reddit.com/r/*').as('getPosts');
   });
 
   it('should have a header with', () => {
     cy.visit('/');
 
-    cy.get('.TopBar .title')
-      .should('have.text', 'reactjs');
+    cy.get('.TopBar .title').should('have.text', 'reactjs');
   });
 
-  it('should visit on FrontPage', function () {
+  it('should visit on FrontPage', function() {
     cy.visit('/');
 
     cy.get('.FrontPage').should('exist');
   });
 
-  it('should have navigation buttons', function () {
+  it('should have navigation buttons', function() {
     cy.visit('/');
     cy.wait('@getPosts');
 
-    cy.get('.navigation-container button').eq(0)
-      .should('have.text', 'Prev')
-    cy.get('.navigation-container button').eq(1)
-      .should('have.text', 'Next')
+    cy.get('.navigation-container button')
+      .eq(0)
+      .should('have.text', 'Prev');
+    cy.get('.navigation-container button')
+      .eq(1)
+      .should('have.text', 'Next');
   });
 
-  it('should show post List', function () {
+  it('should show post List', function() {
     cy.visit('/');
     cy.wait('@getPosts');
 
@@ -36,5 +37,43 @@ describe('App E2E', () => {
     cy.get('.Post .header-container').should('exist');
     cy.get('.Post .middle-container').should('exist');
     cy.get('.Post .footer-container').should('exist');
+  });
+
+  it('should navigate to Prev/Next page', function() {
+    cy.visit('/');
+    cy.wait('@getPosts');
+
+    cy.get('[data-cy="prev-btn"]').click();
+
+    cy.wait('@getPosts');
+
+    cy.get('[data-cy="no-data"]').should('have.text', 'No data');
+
+    cy.get('[data-cy="next-btn"]').click();
+
+    cy.wait('@getPosts');
+
+    cy.get('.post-list').should('exist');
+    cy.get('.Post').should('exist');
+
+    cy.get('[data-cy="next-btn"]').click();
+
+    cy.wait('@getPosts');
+
+    cy.get('.post-list').should('exist');
+    cy.get('.Post').should('exist');
+
+    cy.get('[data-cy="prev-btn"]').click();
+
+    cy.wait('@getPosts');
+
+    cy.get('.post-list').should('exist');
+    cy.get('.Post').should('exist');
+
+    cy.get('[data-cy="prev-btn"]').click();
+
+    cy.wait('@getPosts');
+
+    cy.get('[data-cy="no-data"]').should('have.text', 'No data');
   });
 });

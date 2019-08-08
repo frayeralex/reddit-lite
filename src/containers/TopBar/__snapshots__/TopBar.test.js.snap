@@ -28,6 +28,7 @@ exports[`<TopBar/> should handle input state changes correct 1`] = `
         className="navigation-container"
       >
         <button
+          data-cy="next-btn"
           onClick={[Function]}
         >
           Next
@@ -66,6 +67,7 @@ exports[`<TopBar/> should handle input state changes correct 2`] = `
         className="navigation-container"
       >
         <button
+          data-cy="next-btn"
           onClick={[Function]}
         >
           Next
@@ -103,11 +105,13 @@ exports[`<TopBar/> should hide Prev button 1`] = `
         className="navigation-container"
       >
         <button
+          data-cy="prev-btn"
           onClick={[Function]}
         >
           Prev
         </button>
         <button
+          data-cy="next-btn"
           onClick={[Function]}
         >
           Next
@@ -145,11 +149,13 @@ exports[`<TopBar/> should hide Prev button 2`] = `
         className="navigation-container"
       >
         <button
+          data-cy="prev-btn"
           onClick={[Function]}
         >
           Prev
         </button>
         <button
+          data-cy="next-btn"
           onClick={[Function]}
         >
           Next
@@ -187,6 +193,7 @@ exports[`<TopBar/> should hide Prev button 3`] = `
         className="navigation-container"
       >
         <button
+          data-cy="next-btn"
           onClick={[Function]}
         >
           Next
@@ -224,6 +231,7 @@ exports[`<TopBar/> should render without crashing 1`] = `
         className="navigation-container"
       >
         <button
+          data-cy="next-btn"
           onClick={[Function]}
         >
           Next

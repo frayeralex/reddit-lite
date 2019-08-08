@@ -48,7 +48,7 @@ export class FrontPage extends React.Component {
 
   renderPostList() {
     if (this.props.posts.length === 0) {
-      return <div>No data</div>;
+      return <div data-cy="no-data">No data</div>;
     }
     return (
       <ul className="post-list">
