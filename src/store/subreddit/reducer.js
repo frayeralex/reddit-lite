@@ -1,9 +1,10 @@
 import * as types from './types';
+import { DEFAULT_SUB_REDDIT } from 'constants/api';
 
 const initialState = {
   pending: false,
   fetched: false,
-  current: 'reactjs',
+  current: DEFAULT_SUB_REDDIT || '',
   before: null,
   after: null,
   postsLimit: 25,

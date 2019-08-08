@@ -34,4 +34,20 @@ describe('<TopBar/>', () => {
     expect(preventDefault).toHaveBeenCalled();
     expect(setCurrent).toHaveBeenCalledWith('current');
   });
+  it('should show postsLimit prop in select value correctly', function() {
+    const component = shallow(<TopBar />);
+    expect(component.find('select').prop('value')).toEqual(25);
+    component.setProps({ postsLimit: 50 });
+    expect(component).toMatchSnapshot();
+  });
+  it('should handle post limit selector change correctly', function() {
+    const setPostsLimit = jest.fn();
+    const component = shallow(<TopBar setPostsLimit={setPostsLimit} />);
+    const select = component
+      .find('.select-container select[name="postsLimit"]')
+      .first();
+    select.simulate('change', { target: { value: '100' } });
+    expect(component).toMatchSnapshot();
+    expect(setPostsLimit).toHaveBeenCalledWith(100);
+  });
 });
