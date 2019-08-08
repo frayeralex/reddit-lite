@@ -1,5 +1,6 @@
 import * as types from './types';
 import { subredditService } from 'services';
+import { DEFAULT_POST_LIMIT } from '../../constants/api';
 
 export const setPosts = payload => ({
   type: types.SET_POSTS,
@@ -74,7 +75,10 @@ export const fetchNextPage = () => async (dispatch, getState) => {
       limit: subreddit.postsLimit,
     };
     if (subreddit.posts.length > 0) {
-      params.after = subreddit.posts[subreddit.posts.length - 1].data.name;
+      params.after = (
+        subreddit.posts[DEFAULT_POST_LIMIT - 1] ||
+        subreddit.posts[subreddit.posts.length - 1]
+      ).data.name;
     }
     const response = await subredditService.posts.getAll(
       (lastFetchedParams.current = subreddit.current),
@@ -93,7 +97,6 @@ export const fetchPrevPage = () => async (dispatch, getState) => {
     const params = {
       before: subreddit.before,
       count: subreddit.posts.length,
-      limit: subreddit.postsLimit,
     };
     if (subreddit.posts.length > 0) {
       params.before = subreddit.posts[0].data.name;

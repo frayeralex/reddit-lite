@@ -17,11 +17,14 @@ describe('App E2E', () => {
     cy.get('.FrontPage').should('exist');
   });
 
-  it('should have search form and trigger serach when press enter', function () {
-    cy.get('.search-container input')
-      .should('have.value', 'reactjs')
-      .type('{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}{backspace}')
-      .type('news{enter}');
+  it('should have navigation buttons', function () {
+    cy.visit('/');
+    cy.wait('@getPosts');
+
+    cy.get('.navigation-container button').eq(0)
+      .should('have.text', 'Prev')
+    cy.get('.navigation-container button').eq(1)
+      .should('have.text', 'Next')
   });
 
   it('should show post List', function () {

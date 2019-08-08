@@ -11,7 +11,6 @@ export class TopBar extends React.PureComponent {
     fetchPrevPage: PropTypes.func,
     fetchNextPage: PropTypes.func,
     setCurrent: PropTypes.func,
-    postsLimit: PropTypes.number,
     title: PropTypes.string,
   };
 
@@ -19,7 +18,6 @@ export class TopBar extends React.PureComponent {
     postsLimit: DEFAULT_POST_LIMIT,
     fetchNextPage: () => {},
     setCurrent: () => {},
-    setPostsLimit: () => {},
   };
 
   constructor(props) {
@@ -39,10 +37,6 @@ export class TopBar extends React.PureComponent {
 
   handleNamedInputChange = ({ target: { value, name } }) => {
     this.setState({ [name]: value });
-  };
-
-  handlePostLimitSelectorChange = ({ target: { value } }) => {
-    this.props.setPostsLimit(Number(value));
   };
 
   handleNextBtnClick = () => {
@@ -67,21 +61,10 @@ export class TopBar extends React.PureComponent {
                 onChange={this.handleNamedInputChange}
               />
             </form>
-            <div className="select-container">
-              <select
-                name="postsLimit"
-                value={this.props.postsLimit}
-                onChange={this.handlePostLimitSelectorChange}
-              >
-                {this.postsLimitoptions.map(value => (
-                  <option key={value} value={value}>
-                    {value}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <button onClick={this.handlePrevBtnClick}>Prev</button>
+            <div className="navigation-container">
+              {(this.props.beforePostId || this.props.afterPostId) && (
+                <button onClick={this.handlePrevBtnClick}>Prev</button>
+              )}
               <button onClick={this.handleNextBtnClick}>Next</button>
             </div>
           </div>
@@ -93,14 +76,14 @@ export class TopBar extends React.PureComponent {
 
 const mapStateToProps = state => ({
   title: subreddit.selectors.getCurrent(state),
-  postsLimit: subreddit.selectors.getPostsLimit(state),
+  afterPostId: subreddit.selectors.getAfter(state),
+  beforePostId: subreddit.selectors.getBefore(state),
 });
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       setCurrent: subreddit.actions.setCurrent,
-      setPostsLimit: subreddit.actions.setPostsLimit,
       fetchNextPage: subreddit.actions.fetchNextPage,
       fetchPrevPage: subreddit.actions.fetchPrevPage,
     },

@@ -24,46 +24,7 @@ exports[`<TopBar/> should handle input state changes correct 1`] = `
           value="current"
         />
       </form>
-      <div
-        className="select-container"
-      >
-        <select
-          name="postsLimit"
-          onChange={[Function]}
-          value={25}
-        >
-          <option
-            key="25"
-            value={25}
-          >
-            25
-          </option>
-          <option
-            key="50"
-            value={50}
-          >
-            50
-          </option>
-          <option
-            key="75"
-            value={75}
-          >
-            75
-          </option>
-          <option
-            key="100"
-            value={100}
-          >
-            100
-          </option>
-        </select>
-      </div>
       <div>
-        <button
-          onClick={[Function]}
-        >
-          Prev
-        </button>
         <button
           onClick={[Function]}
         >
@@ -99,46 +60,7 @@ exports[`<TopBar/> should handle input state changes correct 2`] = `
           value=""
         />
       </form>
-      <div
-        className="select-container"
-      >
-        <select
-          name="postsLimit"
-          onChange={[Function]}
-          value={25}
-        >
-          <option
-            key="25"
-            value={25}
-          >
-            25
-          </option>
-          <option
-            key="50"
-            value={50}
-          >
-            50
-          </option>
-          <option
-            key="75"
-            value={75}
-          >
-            75
-          </option>
-          <option
-            key="100"
-            value={100}
-          >
-            100
-          </option>
-        </select>
-      </div>
       <div>
-        <button
-          onClick={[Function]}
-        >
-          Prev
-        </button>
         <button
           onClick={[Function]}
         >
@@ -247,46 +169,7 @@ exports[`<TopBar/> should render without crashing 1`] = `
           type="text"
         />
       </form>
-      <div
-        className="select-container"
-      >
-        <select
-          name="postsLimit"
-          onChange={[Function]}
-          value={25}
-        >
-          <option
-            key="25"
-            value={25}
-          >
-            25
-          </option>
-          <option
-            key="50"
-            value={50}
-          >
-            50
-          </option>
-          <option
-            key="75"
-            value={75}
-          >
-            75
-          </option>
-          <option
-            key="100"
-            value={100}
-          >
-            100
-          </option>
-        </select>
-      </div>
       <div>
-        <button
-          onClick={[Function]}
-        >
-          Prev
-        </button>
         <button
           onClick={[Function]}
         >
