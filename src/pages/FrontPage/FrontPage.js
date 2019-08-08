@@ -5,10 +5,12 @@ import { connect } from 'react-redux';
 import { Post } from 'components';
 import { Layout } from 'templates';
 import { subreddit } from 'store';
+import { DEFAULT_POST_LIMIT } from 'constants/api';
 import './FrontPage.scss';
 
 export class FrontPage extends React.Component {
   static propTypes = {
+    postsLimit: PropTypes.number,
     fetchPosts: PropTypes.func,
     currentSubreddit: PropTypes.string,
     beforePostId: PropTypes.string,
@@ -16,6 +18,7 @@ export class FrontPage extends React.Component {
   };
 
   static defaultProps = {
+    postsLimit: DEFAULT_POST_LIMIT,
     fetchPosts: () => {},
     posts: [],
   };
@@ -35,6 +38,9 @@ export class FrontPage extends React.Component {
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (prevProps.currentSubreddit !== this.props.currentSubreddit) {
+      this.props.fetchPosts();
+    }
+    if (prevProps.postsLimit !== this.props.postsLimit) {
       this.props.fetchPosts();
     }
   }
@@ -62,6 +68,7 @@ export class FrontPage extends React.Component {
 }
 
 const mapStateToProps = state => ({
+  postsLimit: subreddit.selectors.getPostsLimit(state),
   beforePostId: subreddit.selectors.beforePostId(state),
   currentSubreddit: subreddit.selectors.getCurrent(state),
   posts: subreddit.selectors.getPosts(state),

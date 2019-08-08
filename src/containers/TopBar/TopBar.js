@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { subreddit } from '../../store';
+import { subreddit } from 'store';
+import { DEFAULT_POST_LIMIT } from 'constants/api';
 import './TopBar.scss';
 
 export class TopBar extends React.PureComponent {
@@ -13,7 +14,7 @@ export class TopBar extends React.PureComponent {
   };
 
   static defaultProps = {
-    postsLimit: 25,
+    postsLimit: DEFAULT_POST_LIMIT,
     setCurrent: () => {},
     setPostsLimit: () => {},
   };

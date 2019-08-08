@@ -1,14 +1,15 @@
 import reducer from './reducer';
 import * as types from './types';
+import { DEFAULT_POST_LIMIT, DEFAULT_SUB_REDDIT } from 'constants/api';
 import posts from '../../__fixtures__/posts';
 
 const initState = {
   pending: false,
   fetched: false,
-  current: 'reactjs',
+  current: DEFAULT_SUB_REDDIT,
   before: null,
   after: null,
-  postsLimit: 25,
+  postsLimit: DEFAULT_POST_LIMIT,
   posts: [],
   error: null,
 };

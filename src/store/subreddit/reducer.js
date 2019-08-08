@@ -1,13 +1,13 @@
 import * as types from './types';
-import { DEFAULT_SUB_REDDIT } from 'constants/api';
+import { DEFAULT_SUB_REDDIT, DEFAULT_POST_LIMIT } from 'constants/api';
 
 const initialState = {
   pending: false,
   fetched: false,
-  current: DEFAULT_SUB_REDDIT || '',
+  current: DEFAULT_SUB_REDDIT,
   before: null,
   after: null,
-  postsLimit: 25,
+  postsLimit: DEFAULT_POST_LIMIT,
   posts: [],
   error: null,
 };

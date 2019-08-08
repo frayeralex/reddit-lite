@@ -1,5 +1,6 @@
 import React from 'react';
 import { TopBar } from './TopBar';
+import { DEFAULT_POST_LIMIT } from 'constants/api';
 
 describe('<TopBar/>', () => {
   it('should render without crashing', function() {
@@ -36,7 +37,7 @@ describe('<TopBar/>', () => {
   });
   it('should show postsLimit prop in select value correctly', function() {
     const component = shallow(<TopBar />);
-    expect(component.find('select').prop('value')).toEqual(25);
+    expect(component.find('select').prop('value')).toEqual(DEFAULT_POST_LIMIT);
     component.setProps({ postsLimit: 50 });
     expect(component).toMatchSnapshot();
   });

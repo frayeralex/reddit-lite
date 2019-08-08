@@ -1,6 +1,7 @@
 import React from 'react';
 import { FrontPage } from './FrontPage';
 import posts from '../../__fixtures__/posts';
+import { DEFAULT_POST_LIMIT } from '../../constants/api';
 
 describe('<FrontPage/>', function() {
   it('should render without crashing', function() {
@@ -25,6 +26,8 @@ describe('<FrontPage/>', function() {
     expect(fetchPosts).toHaveBeenCalledTimes(1);
     component.setProps({ currentSubreddit: 'currentSubreddit' });
     expect(fetchPosts).toHaveBeenCalledTimes(2);
+    component.setProps({ postsLimit: DEFAULT_POST_LIMIT + DEFAULT_POST_LIMIT });
+    expect(fetchPosts).toHaveBeenCalledTimes(3);
   });
   it('should render Post list if post exist', function() {
     const component = shallow(<FrontPage posts={[posts[0], posts[1]]} />);
