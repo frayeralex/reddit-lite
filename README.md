@@ -60,7 +60,11 @@ In the project directory, you can run:
 Open [http://localhost:3000](http://localhost:3000) 
 
 ### `npm test`
+### `npm test:unit`
+### `npm test:watch`
+### `npm test:e2e`
 ### `npm run coveralls`
+### `npm run cypress`
 ### `npm run build`
 ### `npm run eject`
 
