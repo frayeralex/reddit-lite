@@ -76,6 +76,127 @@ exports[`<TopBar/> should handle input state changes correct 2`] = `
 </div>
 `;
 
+exports[`<TopBar/> should hide Prev button 1`] = `
+<div
+  className="TopBar"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="title"
+    />
+    <div
+      className="controls-container"
+    >
+      <form
+        className="search-container"
+        onSubmit={[Function]}
+      >
+        <input
+          name="current"
+          onChange={[Function]}
+          type="text"
+        />
+      </form>
+      <div
+        className="navigation-container"
+      >
+        <button
+          onClick={[Function]}
+        >
+          Prev
+        </button>
+        <button
+          onClick={[Function]}
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TopBar/> should hide Prev button 2`] = `
+<div
+  className="TopBar"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="title"
+    />
+    <div
+      className="controls-container"
+    >
+      <form
+        className="search-container"
+        onSubmit={[Function]}
+      >
+        <input
+          name="current"
+          onChange={[Function]}
+          type="text"
+        />
+      </form>
+      <div
+        className="navigation-container"
+      >
+        <button
+          onClick={[Function]}
+        >
+          Prev
+        </button>
+        <button
+          onClick={[Function]}
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<TopBar/> should hide Prev button 3`] = `
+<div
+  className="TopBar"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="title"
+    />
+    <div
+      className="controls-container"
+    >
+      <form
+        className="search-container"
+        onSubmit={[Function]}
+      >
+        <input
+          name="current"
+          onChange={[Function]}
+          type="text"
+        />
+      </form>
+      <div
+        className="navigation-container"
+      >
+        <button
+          onClick={[Function]}
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<TopBar/> should render without crashing 1`] = `
 <div
   className="TopBar"

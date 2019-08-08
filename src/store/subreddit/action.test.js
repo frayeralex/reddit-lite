@@ -73,8 +73,7 @@ describe('src/store/subreddit/action.js', function() {
           subreddit.current,
           {
             ...options,
-            count: subreddit.posts.length,
-            limit: subreddit.postsLimit,
+            count: subreddit.postsLimit,
           },
         );
         expect(dispatch).toHaveBeenCalledWith({
@@ -100,8 +99,7 @@ describe('src/store/subreddit/action.js', function() {
           subreddit.current,
           {
             ...options,
-            count: subreddit.posts.length,
-            limit: subreddit.postsLimit,
+            count: subreddit.postsLimit,
           },
         );
         expect(dispatch).toHaveBeenCalledWith({

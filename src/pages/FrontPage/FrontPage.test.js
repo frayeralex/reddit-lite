@@ -33,4 +33,13 @@ describe('<FrontPage/>', function() {
     const component = shallow(<FrontPage posts={[posts[0], posts[1]]} />);
     expect(component).toMatchSnapshot();
   });
+  it('should call reFetch action in intervalHandler method', function() {
+    const props = {
+      reFetchPosts: jest.fn(),
+    };
+    const component = shallow(<FrontPage {...props} />);
+    expect(props.reFetchPosts).not.toHaveBeenCalled();
+    component.instance().intervalHandler();
+    expect(props.reFetchPosts).toHaveBeenCalled();
+  });
 });

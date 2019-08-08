@@ -35,4 +35,37 @@ describe('<TopBar/>', () => {
     expect(preventDefault).toHaveBeenCalled();
     expect(setCurrent).toHaveBeenCalledWith('current');
   });
+  it('should hide Prev button', function() {
+    const props = {
+      beforePostId: 'beforePostId',
+      afterPostId: 'afterPostId',
+    };
+    const component = shallow(<TopBar {...props} />);
+    expect(component).toMatchSnapshot();
+    component.setProps({ beforePostId: null });
+    expect(component).toMatchSnapshot();
+    component.setProps({ afterPostId: null });
+    expect(component).toMatchSnapshot();
+  });
+  it('should handle Prev Next button clicks', function() {
+    const props = {
+      beforePostId: 'beforePostId',
+      afterPostId: 'afterPostId',
+      fetchNextPage: jest.fn(),
+      fetchPrevPage: jest.fn(),
+    };
+    const component = shallow(<TopBar {...props} />);
+    expect(props.fetchPrevPage).not.toHaveBeenCalled();
+    component
+      .find('button')
+      .at(0)
+      .simulate('click');
+    expect(props.fetchPrevPage).toHaveBeenCalled();
+    expect(props.fetchNextPage).not.toHaveBeenCalled();
+    component
+      .find('button')
+      .at(1)
+      .simulate('click');
+    expect(props.fetchNextPage).toHaveBeenCalled();
+  });
 });

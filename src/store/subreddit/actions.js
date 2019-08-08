@@ -51,8 +51,7 @@ export const fetchPosts = options => async (dispatch, getState) => {
     const { subreddit } = getState();
     const params = {
       ...options,
-      count: subreddit.posts.length,
-      limit: subreddit.postsLimit,
+      count: subreddit.postsLimit,
     };
 
     const response = await subredditService.posts.getAll(
@@ -71,8 +70,7 @@ export const fetchNextPage = () => async (dispatch, getState) => {
     dispatch(setPending(true));
     const { subreddit } = getState();
     const params = {
-      count: subreddit.posts.length,
-      limit: subreddit.postsLimit,
+      count: subreddit.postsLimit,
     };
     if (subreddit.posts.length > 0) {
       params.after = (
@@ -95,15 +93,15 @@ export const fetchPrevPage = () => async (dispatch, getState) => {
     dispatch(setPending(true));
     const { subreddit } = getState();
     const params = {
-      before: subreddit.before,
       count: subreddit.posts.length,
     };
+
     if (subreddit.posts.length > 0) {
       params.before = subreddit.posts[0].data.name;
     }
 
     const response = await subredditService.posts.getAll(
-      (lastFetchedParams.params = subreddit.current),
+      (lastFetchedParams.current = subreddit.current),
       (lastFetchedParams.params = params),
     );
     dispatch(setPosts(response.data.data));
