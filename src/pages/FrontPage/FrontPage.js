@@ -13,7 +13,6 @@ export class FrontPage extends React.Component {
     postsLimit: PropTypes.number,
     fetchPosts: PropTypes.func,
     currentSubreddit: PropTypes.string,
-    beforePostId: PropTypes.string,
     posts: PropTypes.arrayOf(PropTypes.object),
   };
 
@@ -69,7 +68,6 @@ export class FrontPage extends React.Component {
 
 const mapStateToProps = state => ({
   postsLimit: subreddit.selectors.getPostsLimit(state),
-  beforePostId: subreddit.selectors.beforePostId(state),
   currentSubreddit: subreddit.selectors.getCurrent(state),
   posts: subreddit.selectors.getPosts(state),
 });

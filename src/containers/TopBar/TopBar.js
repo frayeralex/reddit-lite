@@ -8,6 +8,8 @@ import './TopBar.scss';
 
 export class TopBar extends React.PureComponent {
   static propTypes = {
+    fetchPrevPage: PropTypes.func,
+    fetchNextPage: PropTypes.func,
     setCurrent: PropTypes.func,
     postsLimit: PropTypes.number,
     title: PropTypes.string,
@@ -15,6 +17,7 @@ export class TopBar extends React.PureComponent {
 
   static defaultProps = {
     postsLimit: DEFAULT_POST_LIMIT,
+    fetchNextPage: () => {},
     setCurrent: () => {},
     setPostsLimit: () => {},
   };
@@ -40,6 +43,14 @@ export class TopBar extends React.PureComponent {
 
   handlePostLimitSelectorChange = ({ target: { value } }) => {
     this.props.setPostsLimit(Number(value));
+  };
+
+  handleNextBtnClick = () => {
+    this.props.fetchNextPage();
+  };
+
+  handlePrevBtnClick = () => {
+    this.props.fetchPrevPage();
   };
 
   render() {
@@ -69,6 +80,10 @@ export class TopBar extends React.PureComponent {
                 ))}
               </select>
             </div>
+            <div>
+              <button onClick={this.handlePrevBtnClick}>Prev</button>
+              <button onClick={this.handleNextBtnClick}>Next</button>
+            </div>
           </div>
         </div>
       </div>
@@ -86,6 +101,8 @@ const mapDispatchToProps = dispatch =>
     {
       setCurrent: subreddit.actions.setCurrent,
       setPostsLimit: subreddit.actions.setPostsLimit,
+      fetchNextPage: subreddit.actions.fetchNextPage,
+      fetchPrevPage: subreddit.actions.fetchPrevPage,
     },
     dispatch,
   );

@@ -58,6 +58,18 @@ exports[`<TopBar/> should handle input state changes correct 1`] = `
           </option>
         </select>
       </div>
+      <div>
+        <button
+          onClick={[Function]}
+        >
+          Prev
+        </button>
+        <button
+          onClick={[Function]}
+        >
+          Next
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -121,6 +133,18 @@ exports[`<TopBar/> should handle input state changes correct 2`] = `
           </option>
         </select>
       </div>
+      <div>
+        <button
+          onClick={[Function]}
+        >
+          Prev
+        </button>
+        <button
+          onClick={[Function]}
+        >
+          Next
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -182,6 +206,18 @@ exports[`<TopBar/> should handle post limit selector change correctly 1`] = `
             100
           </option>
         </select>
+      </div>
+      <div>
+        <button
+          onClick={[Function]}
+        >
+          Prev
+        </button>
+        <button
+          onClick={[Function]}
+        >
+          Next
+        </button>
       </div>
     </div>
   </div>
@@ -245,6 +281,18 @@ exports[`<TopBar/> should render without crashing 1`] = `
           </option>
         </select>
       </div>
+      <div>
+        <button
+          onClick={[Function]}
+        >
+          Prev
+        </button>
+        <button
+          onClick={[Function]}
+        >
+          Next
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -306,6 +354,18 @@ exports[`<TopBar/> should show postsLimit prop in select value correctly 1`] = `
             100
           </option>
         </select>
+      </div>
+      <div>
+        <button
+          onClick={[Function]}
+        >
+          Prev
+        </button>
+        <button
+          onClick={[Function]}
+        >
+          Next
+        </button>
       </div>
     </div>
   </div>
