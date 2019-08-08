@@ -1,5 +1,6 @@
 import Service from './Subreddit';
 import { httpClient } from 'utils';
+import { SUB_REDDIT_PATH } from '../../constants/api';
 
 jest.mock('utils');
 
@@ -16,7 +17,7 @@ describe('SubredditService', function() {
 
         expect(httpClient.request).toBeCalledWith({
           method: 'GET',
-          url: `/r/${sub}.json`,
+          url: `${SUB_REDDIT_PATH}/${sub}.json`,
           params,
         });
       });

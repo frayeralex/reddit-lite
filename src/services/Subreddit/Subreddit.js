@@ -1,4 +1,5 @@
 import { httpClient } from 'utils';
+import { SUB_REDDIT_PATH } from 'constants/api';
 
 const SubredditService = {
   posts: {
@@ -10,7 +11,7 @@ const SubredditService = {
     getAll(sub, params = {}) {
       return httpClient.request({
         method: 'GET',
-        url: `/r/${sub}.json`,
+        url: `${SUB_REDDIT_PATH}/${sub}.json`,
         params,
       });
     },
