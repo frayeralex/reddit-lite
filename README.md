@@ -42,6 +42,16 @@ Reddit-Lite
         ├── utils                   # Store utilites, helpers, middlewares modules
         └── index.js                # Main js file (entry file)
 
+### Project setup
+
+Run following command
+
+`git clone git@github.com:frayeralex/reddit-lite.git` 
+
+`cd reddit-lite`
+
+`yarn or npm install`
+
 ### Available Scripts
 
 In the project directory, you can run:
