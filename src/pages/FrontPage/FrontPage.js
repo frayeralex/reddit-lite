@@ -12,6 +12,7 @@ export class FrontPage extends React.Component {
   static propTypes = {
     postsLimit: PropTypes.number,
     fetchPosts: PropTypes.func,
+    reFetchPosts: PropTypes.func,
     currentSubreddit: PropTypes.string,
     posts: PropTypes.arrayOf(PropTypes.object),
   };
@@ -19,6 +20,7 @@ export class FrontPage extends React.Component {
   static defaultProps = {
     postsLimit: DEFAULT_POST_LIMIT,
     fetchPosts: () => {},
+    reFetchPosts: () => {},
     posts: [],
   };
 
@@ -32,7 +34,7 @@ export class FrontPage extends React.Component {
   }
 
   intervalHandler = () => {
-    this.props.fetchPosts();
+    this.props.reFetchPosts();
   };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -76,6 +78,7 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       fetchPosts: subreddit.actions.fetchPosts,
+      reFetchPosts: subreddit.actions.reFetchPosts,
     },
     dispatch,
   );

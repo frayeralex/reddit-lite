@@ -26,19 +26,39 @@ export const setError = error => ({
   payload: error,
 });
 
+const lastFetchedParams = {
+  current: null,
+  params: {},
+};
+
+export const reFetchPosts = () => async dispatch => {
+  try {
+    dispatch(setPending(true));
+    const response = await subredditService.posts.getAll(
+      lastFetchedParams.current,
+      lastFetchedParams.params,
+    );
+    dispatch(setPosts(response.data.data));
+  } catch (e) {
+    dispatch(setError(e));
+  }
+};
+
 export const fetchPosts = options => async (dispatch, getState) => {
   try {
     dispatch(setPending(true));
     const { subreddit } = getState();
     const params = {
       ...options,
-      count: subreddit.postsLimit,
+      count: subreddit.posts.length,
+      limit: subreddit.postsLimit,
     };
 
     const response = await subredditService.posts.getAll(
-      subreddit.current,
-      params,
+      (lastFetchedParams.current = subreddit.current),
+      (lastFetchedParams.params = params),
     );
+    lastFetchedParams.current = subreddit.current;
     dispatch(setPosts(response.data.data));
   } catch (e) {
     dispatch(setError(e));
@@ -50,14 +70,15 @@ export const fetchNextPage = () => async (dispatch, getState) => {
     dispatch(setPending(true));
     const { subreddit } = getState();
     const params = {
-      count: subreddit.postsLimit,
+      count: subreddit.posts.length,
+      limit: subreddit.postsLimit,
     };
     if (subreddit.posts.length > 0) {
       params.after = subreddit.posts[subreddit.posts.length - 1].data.name;
     }
     const response = await subredditService.posts.getAll(
-      subreddit.current,
-      params,
+      (lastFetchedParams.current = subreddit.current),
+      (lastFetchedParams.params = params),
     );
     dispatch(setPosts(response.data.data));
   } catch (e) {
@@ -71,15 +92,16 @@ export const fetchPrevPage = () => async (dispatch, getState) => {
     const { subreddit } = getState();
     const params = {
       before: subreddit.before,
-      count: subreddit.postsLimit,
+      count: subreddit.posts.length,
+      limit: subreddit.postsLimit,
     };
     if (subreddit.posts.length > 0) {
       params.before = subreddit.posts[0].data.name;
     }
 
     const response = await subredditService.posts.getAll(
-      subreddit.current,
-      params,
+      (lastFetchedParams.params = subreddit.current),
+      (lastFetchedParams.params = params),
     );
     dispatch(setPosts(response.data.data));
   } catch (e) {

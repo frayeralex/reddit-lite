@@ -48,6 +48,7 @@ describe('src/store/subreddit/action.js', function() {
       const subreddit = {
         current: 'current',
         postsLimit: 25,
+        posts: [],
       };
       const getState = () => ({ subreddit });
       const options = {
@@ -72,7 +73,8 @@ describe('src/store/subreddit/action.js', function() {
           subreddit.current,
           {
             ...options,
-            count: subreddit.postsLimit,
+            count: subreddit.posts.length,
+            limit: subreddit.postsLimit,
           },
         );
         expect(dispatch).toHaveBeenCalledWith({
@@ -98,7 +100,8 @@ describe('src/store/subreddit/action.js', function() {
           subreddit.current,
           {
             ...options,
-            count: subreddit.postsLimit,
+            count: subreddit.posts.length,
+            limit: subreddit.postsLimit,
           },
         );
         expect(dispatch).toHaveBeenCalledWith({
