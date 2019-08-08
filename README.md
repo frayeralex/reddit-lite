@@ -86,8 +86,32 @@ import Post from '../../../components/Post/Post'
 - `moment` - date management library
 - `axios` - http client library
 
-### git hooks
+### Git hooks
 
 There are two main hooks setup
 - `pre-commit` - will run prettier to fix code style issues in staged files
 - `pre-push` - will run tests, and prevent pushing if test failed
+
+### Building project
+
+Run following command
+### `npm run build`
+
+Project build will store in `build/` folder
+
+    build/
+    ├── index.html                      
+    ├── manifest.json                      
+    ├── service-worker.js               
+    ├── ...               
+    └── static                   
+        └── js 
+            ├── main[hash].chunk.js             
+            ├── main[hash].chunk.js.map            
+            └── ...[hash].chunk.js
+        ├── css    
+            ├── main[hash].chunk.css             
+            ├── main[hash].chunk.css.map             
+            └── ...[hash].chunk.css
+        └── assets                  
+            └── ...[hash].chunk.png         
