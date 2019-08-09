@@ -2,10 +2,20 @@ Reddit-Lite
 ==============
 [![Build Status](https://travis-ci.org/frayeralex/reddit-lite.svg?branch=master)](https://travis-ci.org/frayeralex/reddit-lite)
 [![Coverage Status](https://coveralls.io/repos/github/frayeralex/reddit-lite/badge.svg?branch=master)](https://coveralls.io/github/frayeralex/reddit-lite?branch=master)
+
+[Demo](https://dreamy-neumann-afc459.netlify.com/)
+
 ## Project structure
 
     .
     ├── build                       # Compiled files
+    └── cypress                     # Cypress (e2e) folder
+        ├── fixtures                # e2e fixtures
+        ├── plugins                 # Cypress pluging configuration
+        └──  support                # Cypress api configuration
+            └── commands.js         # Cypress custom commands
+        └── integration             # Specs folder
+            └── ....e2e.js          # Specs folder
     ├── public                      # static assets
     ├── README.md                 
     ├── coverage                    # Test coverage data
@@ -59,21 +69,24 @@ In the project directory, you can run:
 ### `npm start` 
 Open [http://localhost:3000](http://localhost:3000) 
 
-### `npm test`
-### `npm test:unit`
-### `npm test:watch`
+### `npm test` - run unit and e2e test
+### `npm test:unit` - run unit test
+### `npm test:watch` - run watch mode for automatic run unit tests
+
+before run `npm test:e2e` unsure that you run app on http://localhost:3000
 ### `npm test:e2e`
-### `npm run coveralls`
-### `npm run cypress`
+
+### `npm run coveralls` - 
+### `npm run cypress` - open cypress test environment
 ### `npm run build`
 ### `npm run eject`
 
-### `npm run prettier`
-### `npm run eslint`
 Code style lint format commands
+### `npm run prettier` - fix code style issues
+### `npm run eslint` - fix code style issues
 
-### `npm run analyze`
 Visualization util for analyze bundle size
+### `npm run analyze`
 
 ### `npm run generact`
 Helper util for creating skeleton of React component
